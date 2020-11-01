@@ -1,0 +1,7 @@
+{
+  "name": "demoAndroidStudio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
