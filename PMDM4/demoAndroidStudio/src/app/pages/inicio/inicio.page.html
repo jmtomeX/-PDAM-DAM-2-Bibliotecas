@@ -1,12 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Bibliotecas</ion-title>
+    <!-- forma sencillla -->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+
+  <!-- forma complicada -->
+    <!-- <ion-buttons slot="start">
+      <ion-button (click)="showMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
+    <ion-title color="primary">Bibliotecas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button [routerLink]="['/camara']" routerLinkActive="router-link-active" >Cámara</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let component of components | async" [routerLink]="component.redirectTo" class="ion-text-capitalize"
+      lines="none" detail>
+      <!-- detail muestra la flecha como en ios -->
+      <ion-icon [name]="component.icon" slot="start" color="primary"></ion-icon>
+      {{component.name}}
+    </ion-item>
+  </ion-list>
+  <!-- <ion-button [routerLink]="['/camara']" routerLinkActive="router-link-active" >Cámara</ion-button>
   <ion-button [routerLink]="['/video-player']" routerLinkActive="router-link-active" >Video player</ion-button>
   <ion-button [routerLink]="['/ng2-charts']" routerLinkActive="router-link-active" >Gráficas</ion-button>
-  <ion-button [routerLink]="['/animaciones']" routerLinkActive="router-link-active" >Animaciones Threes.js</ion-button>
+  <ion-button [routerLink]="['/animaciones']" routerLinkActive="router-link-active" >Animaciones Threes.js</ion-button> -->
 </ion-content>

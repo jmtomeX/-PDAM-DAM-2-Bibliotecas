@@ -1,0 +1,22 @@
+[
+    {
+      "icon": "camera-outline",
+      "name": "camara",
+      "redirectTo": "/camara"
+    },
+    {
+      "icon": "cube-outline",
+      "name": "animaciones",
+      "redirectTo": "/animaciones"
+    },
+    {
+      "icon": "bar-chart-outline",
+      "name": "Gráficas",
+      "redirectTo": "/ng2-charts"
+    },
+    {
+      "icon": "videocam-outline",
+      "name": "video player",
+      "redirectTo": "/video-player"
+    }
+]

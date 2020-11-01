@@ -1,3 +1,25 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Bibliotecas</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- oculta el codigo al pulsar -->
+        <ion-menu-toggle *ngFor="let component of components | async" >
+          <ion-item [routerLink]="component.redirectTo"
+            class="ion-text-capitalize" lines="none" detail>
+            <!-- detail muestra la flecha como en ios -->
+            <ion-icon [name]="component.icon" slot="start" color="primary"></ion-icon>
+            {{component.name}}
+          </ion-item>
+        </ion-menu-toggle>
+
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
