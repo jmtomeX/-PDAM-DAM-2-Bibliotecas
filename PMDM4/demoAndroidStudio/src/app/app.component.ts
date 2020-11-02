@@ -22,10 +22,8 @@ export class AppComponent implements OnInit{
   ) {
     this.initializeApp();
   }
-  // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() {
   }
-  
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
