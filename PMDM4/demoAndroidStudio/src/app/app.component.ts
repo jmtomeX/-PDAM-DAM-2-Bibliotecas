@@ -28,8 +28,7 @@ export class AppComponent implements OnInit{
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      // sería lo mismo que en el oninit
-      this.components = this.dataService.getMenuOptions();
+
     });
   }
 }

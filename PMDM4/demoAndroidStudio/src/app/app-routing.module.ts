@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'animaciones',
     loadChildren: () => import('./pages/animaciones/animaciones.module').then(m => m.AnimacionesPageModule)
   },
+  {
+    path: 'embedded',
+    loadChildren: () => import('./pages/embedded/embedded.module').then(m => m.EmbeddedPageModule)
+  },
+  {
+    path: 'fullscreen',
+    loadChildren: () => import('./pages/fullscreen/fullscreen.module').then(m => m.FullscreenPageModule)
+  },
 ];
 
 @NgModule({

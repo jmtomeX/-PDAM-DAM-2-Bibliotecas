@@ -1,4 +1,16 @@
 <app-header titulo="video player" class="ion-text-capitalize"></app-header>
 <ion-content>
+    <div class="ion-padding">
+        <ion-button (click)="setApi()" color='primary' expand="block">Test Api On/Off</ion-button>
 
+        <ion-button (click)="testVideoPlayerPlugin('mp4')" color='primary' expand="block">MP4 Video</ion-button>
+        <ion-button (click)="testVideoPlayerPlugin('aws')" color='primary' expand="block">Video de AWS S3</ion-button>
+        <ion-button *ngIf="aPlatform" (click)="testVideoPlayerPlugin('webm')" color='primary' expand="block">WEBM Video</ion-button>
+        <ion-button (click)="testVideoPlayerPlugin('hls')" color='primary' expand="block">HLS Video</ion-button>
+        <ion-button *ngIf="aPlatform" (click)="testVideoPlayerPlugin('mpd')" color='primary' expand="block">DASH MPD Video</ion-button>
+        <ion-button *ngIf="aPlatform" (click)="testVideoPlayerPlugin('smooth')" color='primary' expand="block">ISM Video</ion-button>
+        <ion-button *ngIf="wPlatform" [href]="'./embedded'" routerDirection="forward" color='primary' expand="block">Videos incrustados</ion-button>
+        <ion-button (click)="testVideoPlayerPlugin('asset')" color='primary' expand="block">Asset Video</ion-button>
+
+    </div>
 </ion-content>
