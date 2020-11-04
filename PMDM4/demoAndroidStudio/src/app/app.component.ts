@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Componente } from './interfaces/interfaces';
 import { DataService } from 'src/app/services/data.service';
+import { PhotoService } from 'src/app/services/photo.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -12,13 +13,14 @@ import { Observable } from 'rxjs';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   components: Observable<Componente[]>;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private dataService: DataService
+    private dataService: DataService,
+    private photoService: PhotoService,
   ) {
     this.initializeApp();
   }

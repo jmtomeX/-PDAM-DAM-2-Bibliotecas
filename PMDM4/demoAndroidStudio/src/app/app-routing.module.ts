@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'fullscreen',
     loadChildren: () => import('./pages/fullscreen/fullscreen.module').then(m => m.FullscreenPageModule)
   },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./pages/gallery/gallery.module').then( m => m.GalleryPageModule)
+  },
 ];
 
 @NgModule({
